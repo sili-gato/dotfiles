@@ -8,7 +8,7 @@ opt.number = true
 
 -- tabs & indentation
 opt.tabstop = 4
-opt.shiftwidth = 2
+opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
 
@@ -37,4 +37,3 @@ opt.splitbelow = true
 
 -- hide ~ on empty line
 opt.fillchars = { eob = " " }
-

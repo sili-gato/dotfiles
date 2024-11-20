@@ -5,9 +5,21 @@ update_space() {
 
     case $SPACE_ID in
     1)
-        ICON=󰅶
-        ICON_PADDING_LEFT=7
-        ICON_PADDING_RIGHT=7
+        # ICON=󰅶
+        ICON=󰊠
+        # ICON=
+        ICON_PADDING_LEFT=10
+        ICON_PADDING_RIGHT=9
+        ;;
+    2)
+        ICON=
+        ICON_PADDING_LEFT=10
+        ICON_PADDING_RIGHT=9
+        ;;
+    3)
+        ICON=
+        ICON_PADDING_LEFT=10
+        ICON_PADDING_RIGHT=8
         ;;
     *)
         ICON=$SPACE_ID

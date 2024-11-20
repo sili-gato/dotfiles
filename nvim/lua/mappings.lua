@@ -6,7 +6,6 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jj", "<ESC>")
 
 vim.g.mapleader = " "
-
 -- save file with ctrl-s
 map("n", "<C-s>", ":w<CR>", { noremap = true })
 map("i", "<C-s>", "<C-o>:write<CR>a", { noremap = true })
