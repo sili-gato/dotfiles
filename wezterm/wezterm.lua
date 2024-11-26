@@ -1,31 +1,35 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-local mux = wezterm.mux
-
 local status = require("status")
-
+config.keys = require("mappings")
 -- Font
 config.font_size = 16
 
 -- Window
 config.window_background_opacity = 0.85
-config.macos_window_background_blur = 100 -- blur
-config.window_decorations = "RESIZE"      -- removes title bar
+config.macos_window_background_blur = 50 -- blur
+config.window_decorations = "RESIZE"     -- removes title bar
 config.adjust_window_size_when_changing_font_size = false
 config.initial_cols = 175
 config.initial_rows = 48
 config.window_padding = {
-    left = "0.5cell",
-    right = "0.5cell",
+    left = "1cell",
+    right = "0cell",
     top = "0.5cell",
     bottom = 0,
 }
+config.default_cursor_style = "BlinkingBlock"
 
--- Tabs
+config.cursor_blink_ease_in = "Constant"
+config.cursor_blink_ease_out = "Constant"
+config.cursor_blink_rate = 400
+
+config.show_tabs_in_tab_bar = false
 config.use_fancy_tab_bar = false
 config.show_new_tab_button_in_tab_bar = false
-config.tab_max_width = 30
+config.tab_max_width = 2
+config.tab_bar_at_bottom = false
 
 -- Theme
 config.color_scheme = "tokyonight_moon"

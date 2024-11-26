@@ -16,10 +16,10 @@ wezterm.on("update-right-status", function(window, pane)
         end
     end
 
-    window:set_right_status(wezterm.format({
+    window:set_left_status(wezterm.format({
         -- cwd
         { Foreground = { Color = scheme.brights[7] } },
-        { Text = " " },
+        { Text = "    " },
         { Foreground = { Color = scheme.foreground } },
         { Text = cwd },
     }))

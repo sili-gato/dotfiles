@@ -17,6 +17,8 @@ map("n", "<leader>nh", ":nohl<CR>", { desc = "clear search highlights" })
 map("n", "J", ":m .+1<CR>==", { desc = "move line down", noremap = true, silent = true })
 -- K to move the current line up (use g? to show docs for something)
 map("n", "K", ":m .-2<CR>==", { desc = "move line up", noremap = true, silent = true })
+map("v", "H", "0", { desc = "move to line start", noremap = true, silent = true })
+map("v", "L", "$", { desc = "move to line end", noremap = true, silent = true })
 
 -- spliting windows
 map("n", "<leader>ss", ":vsplit<CR>", { desc = "split window vertically" })
@@ -30,6 +32,8 @@ map("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "fuzzy find recen
 map("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "find string under cursor in cwd" })
 map("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "find todos" })
 map("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "find string in cwd" })
+
+-- vimtex-compile
 
 -- lsp actions
 map("n", "gD", vim.lsp.buf.declaration, { desc = "go to declaration" })                               -- go to declaration
