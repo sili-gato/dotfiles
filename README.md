@@ -1,6 +1,6 @@
 # Dotfiles
 
 ## Wezterm & Neovim sneakpeek
-![]("./images/wez-nvim.png")
+![](https://github.com/sili-gato/dotfiles/blob/main/images/wez-nvim.png)
 ## Neovim dashboard
-![]("./images/dashboard.png")
+![](https://github.com/sili-gato/dotfiles/blob/main/images/dashboard.png)
