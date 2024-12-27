@@ -40,6 +40,18 @@ vim.schedule(function()
     require "mappings"
 end)
 
+require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/LuaSnip/" })
+require("luasnip").config.set_config({ -- Setting LuaSnip config
+    enable_autosnippets = true,
+    store_selection_keys = "<Tab>",
+})
+
+vim.cmd [[
+imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'
+smap <silent><expr> <Tab> luasnip#jumpable(1) ? '<Plug>luasnip-jump-next' : '<Tab>'
+imap <silent><expr> <S-Tab> luasnip#jumpable(-1) ? '<Plug>luasnip-jump-prev' : '<S-Tab>'
+smap <silent><expr> <S-Tab> luasnip#jumpable(-1) ? '<Plug>luasnip-jump-prev' : '<S-Tab>'
+]]
 -- dashboard stuff
 vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#5eead4" }) -- logo
 vim.api.nvim_set_hl(0, "DashboardIcon", { fg = "#8b5cf6" })   -- icon
