@@ -7,7 +7,8 @@
 local M = {}
 
 M.base46 = {
-    theme = "jabuti",
+    -- theme = "jabuti",
+    theme = "everblush",
 
     hl_override = {
         Comment = { italic = true },
@@ -15,6 +16,7 @@ M.base46 = {
     },
     transparency = true
 }
+
 M.ui = {
     statusline = {
         theme = "minimal",

@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 local helpers = require('luasnip-tex.luasnip-helper-funcs')
 local get_visual = helpers.get_visual
 

@@ -6,35 +6,12 @@ return {
     },
     {
         "hrsh7th/nvim-cmp",
-        config = function(_, opts)
-            local cmp = require("cmp")
-
-            local mymappings = {
-                ["<Up>"] = cmp.mapping.select_prev_item(),
-                ["<Down>"] = cmp.mapping.select_next_item(),
-                ["<C-c>"] = cmp.mapping.confirm({
-                    behavior = cmp.ConfirmBehavior.Replace,
-                    select = true,
-                }),
-            }
-
-            opts.mapping = vim.tbl_deep_extend("force", opts.mapping, mymappings)
-            cmp.setup(opts)
+        opts = function()
+            return require "configs.cmp"
         end,
     },
     {
-        'stevearc/aerial.nvim',
-        lazy = false,
-        opts = {},
-        -- Optional dependencies
-        dependencies = {
-            "nvim-treesitter/nvim-treesitter",
-            "nvim-tree/nvim-web-devicons"
-        },
-    },
-    {
         "sphamba/smear-cursor.nvim",
-        lazy = false,
         opts = {},
     },
     {
